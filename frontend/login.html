@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | Fly-Ease</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVBAR -->
+    <header>
+        <div class="logo">
+            <img src="logoflyease.png" alt="Fly-Ease Logo">
+            <h2>Fly-Ease</h2>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="register.html">Register</a>
+            <a href="searchFlights.html">Search Flights</a>
+            <a href="adminDashboard.html">Admin</a>
+        </nav>
+    </header>
+
+    <!-- LOGIN SECTION -->
+    <section class="login-section">
+        <div class="login-card">
+            <h2>Login to Fly-Ease</h2>
+
+            <form>
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email" required>
+
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required>
+
+                <label>Login As</label>
+                <div class="role-select">
+                    <input type="radio" name="role" id="user" checked>
+                    <label for="user">User</label>
+
+                    <input type="radio" name="role" id="admin">
+                    <label for="admin">Admin</label>
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <p class="register-link">
+                Don’t have an account?
+                <a href="register.html">Register here</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Fly-Ease | Flight Booking System</p>
+    </footer>
+
+</body>
+</html>
