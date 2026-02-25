@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fly-Ease | Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<img src="logoflyease.png" alt="Fly-Ease Logo">
+<span class="tagline">Fly Smart · Fly Confident</span>
+</div>
+<h1>Fly-Ease Admin Panel</h1>
+<nav>
+<a href="home.html">Home</a>
+<a href="searchFlights.html">Flights</a>
+<a href="login.html">Login</a>
+</nav>
+</header>
+
+<div class="dashboard-container">
+    <div class="admin-card">
+        <h2>Admin Login</h2>
+
+        <form onsubmit="return validateAdmin()">
+
+            <div class="input-box">
+                <label>User ID</label>
+                <input type="text" id="userid" placeholder="Enter Admin ID">
+            </div>
+
+            <div class="input-box">
+                <label>Full Name</label>
+                <input type="text" id="fullname" placeholder="Enter Full Name">
+            </div>
+
+            <div class="input-box">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter Password">
+            </div>
+
+            <div id="message"></div>
+
+            <button type="submit" class="login-btn">Login</button>
+
+        </form>
+    </div>
+</div>
+
+<script>
+function validateAdmin() {
+
+let userId = document.getElementById("userid").value.trim();
+let fullName = document.getElementById("fullname").value.trim();
+let password = document.getElementById("password").value.trim();
+let message = document.getElementById("message");
+
+message.innerHTML = "";
+
+if (userId === "") {
+message.innerHTML = "<div class='error'>User ID is required.</div>";
+return false;
+}
+if (userId.length < 4) {
+message.innerHTML = "<div class='error'>User ID must be at least 4 characters.</div>";
+return false;
+}
+
+if (fullName === "") {
+message.innerHTML = "<div class='error'>Full Name is required.</div>";
+return false;
+}
+if (!/^[A-Za-z ]+$/.test(fullName)) {
+message.innerHTML = "<div class='error'>Full Name must contain only letters.</div>";
+return false;
+}
+
+if (password === "") {
+message.innerHTML = "<div class='error'>Password is required.</div>";
+return false;
+}
+if (password.length < 6) {
+message.innerHTML = "<div class='error'>Password must be at least 6 characters.</div>";
+return false;
+}
+if (!/(?=.*[A-Za-z])(?=.*\d)/.test(password)) {
+message.innerHTML = "<div class='error'>Password must contain at least 1 letter and 1 number.</div>";
+return false;
+}
+
+message.innerHTML = "<div class='success'>Validation Successful!</div>";
+return false;
+}
+</script>
+
+</body>
+</html>
