@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Results | Fly-Ease</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="logoflyease.png" alt="Fly-Ease Logo">
+            <h2>Fly-Ease</h2>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="searchFlights.html">Search Flights</a>
+        </nav>
+    </header>
+
+    <!-- HERO / PAGE TOP -->
+    <section class="results-hero">
+        <div class="results-hero-content">
+            <div>
+                <h1>Available Flights</h1>
+                <p>Compare smart insights, choose the best route, and book with confidence.</p>
+            </div>
+            <div class="search-summary-box">
+                <span>From: <strong>Chennai</strong></span>
+                <span>To: <strong>Delhi</strong></span>
+                <span>Date: <strong>20 Mar 2026</strong></span>
+                <span>Preference: <strong>Cheapest</strong></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN RESULTS SECTION -->
+    <section class="results-page">
+
+        <!-- LEFT FILTER PANEL -->
+        <aside class="filters-panel">
+            <h3>Refine Results</h3>
+
+            <div class="filter-box">
+                <label for="sort">Sort By</label>
+                <select id="sort">
+                    <option>Recommended</option>
+                    <option>Lowest Price</option>
+                    <option>Shortest Duration</option>
+                    <option>Best Eco Score</option>
+                </select>
+            </div>
+
+            <div class="filter-box">
+                <label>Travel Class</label>
+                <div class="filter-options">
+                    <label><input type="checkbox"> Economy</label>
+                    <label><input type="checkbox"> Premium Economy</label>
+                    <label><input type="checkbox"> Business</label>
+                </div>
+            </div>
+
+            <div class="filter-box">
+                <label>Preferred Time</label>
+                <div class="filter-options">
+                    <label><input type="checkbox"> Morning</label>
+                    <label><input type="checkbox"> Afternoon</label>
+                    <label><input type="checkbox"> Evening</label>
+                    <label><input type="checkbox"> Night</label>
+                </div>
+            </div>
+
+            <div class="filter-box">
+                <label>Crowd Level</label>
+                <div class="filter-options">
+                    <label><input type="checkbox"> Low Crowd</label>
+                    <label><input type="checkbox"> Medium Crowd</label>
+                    <label><input type="checkbox"> High Crowd</label>
+                </div>
+            </div>
+
+            <div class="filter-box">
+                <label>Airlines</label>
+                <div class="filter-options">
+                    <label><input type="checkbox"> Indigo</label>
+                    <label><input type="checkbox"> Air India</label>
+                    <label><input type="checkbox"> Vistara</label>
+                    <label><input type="checkbox"> Akasa Air</label>
+                </div>
+            </div>
+        </aside>
+
+        <!-- RIGHT RESULTS CONTENT -->
+        <div class="results-content">
+
+            <!-- TOP INSIGHT STRIP -->
+            <div class="results-insights">
+                <div class="insight-card">
+                    <h4>12 Flights Found</h4>
+                    <p>Multiple options matching your search criteria are available today.</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Best Deal</h4>
+                    <p>Lowest fare starts from <strong>₹4,899</strong> with Indigo.</p>
+                </div>
+                <div class="insight-card">
+                    <h4>Smart Tip</h4>
+                    <p>Flights with low crowd and high confidence may offer smoother travel.</p>
+                </div>
+            </div>
+
+            <!-- FLIGHT CARD 1 -->
+            <div class="flight-card modern-flight-card">
+                <div class="flight-top">
+                    <div class="airline-block">
+                        <img src="image.src" alt="Airline Logo">
+                        <div>
+                            <h3>Indigo Airlines</h3>
+                            <span>Flight No: 6E-214</span>
+                        </div>
+                    </div>
+
+                    <div class="flight-tags">
+                        <span class="tag recommended">Recommended</span>
+                        <span class="tag eco">Eco Friendly</span>
+                    </div>
+                </div>
+
+                <div class="flight-main">
+                    <div class="time-block">
+                        <h2>06:15 AM</h2>
+                        <p>Chennai (MAA)</p>
+                    </div>
+
+                    <div class="journey-line">
+                        <span>2h 40m</span>
+                        <div class="line"></div>
+                        <small>Non-stop</small>
+                    </div>
+
+                    <div class="time-block">
+                        <h2>08:55 AM</h2>
+                        <p>Delhi (DEL)</p>
+                    </div>
+
+                    <div class="price-block">
+                        <h2>₹4,899</h2>
+                        <p>Economy</p>
+                    </div>
+                </div>
+
+                <div class="flight-details-grid">
+                    <div class="detail-pill crowd low">Low Crowd</div>
+                    <div class="detail-pill confidence">Confidence Score: 91%</div>
+                    <div class="detail-pill">Carbon Footprint: 118 kg CO₂</div>
+                    <div class="detail-pill">Seats Left: 18</div>
+                </div>
+
+                <div class="flight-bottom">
+                    <div class="extra-info">
+                        <span>Baggage: 15kg</span>
+                        <span>Refund: Partial</span>
+                        <span>Meal: Included</span>
+                    </div>
+                    <a href="booking.html" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- FLIGHT CARD 2 -->
+            <div class="flight-card modern-flight-card">
+                <div class="flight-top">
+                    <div class="airline-block">
+                        <img src="image.src" alt="Airline Logo">
+                        <div>
+                            <h3>Air India</h3>
+                            <span>Flight No: AI-302</span>
+                        </div>
+                    </div>
+
+                    <div class="flight-tags">
+                        <span class="tag premium">Comfort Pick</span>
+                    </div>
+                </div>
+
+                <div class="flight-main">
+                    <div class="time-block">
+                        <h2>09:30 AM</h2>
+                        <p>Chennai (MAA)</p>
+                    </div>
+
+                    <div class="journey-line">
+                        <span>3h 05m</span>
+                        <div class="line"></div>
+                        <small>1 Stop</small>
+                    </div>
+
+                    <div class="time-block">
+                        <h2>12:35 PM</h2>
+                        <p>Delhi (DEL)</p>
+                    </div>
+
+                    <div class="price-block">
+                        <h2>₹6,250</h2>
+                        <p>Premium Economy</p>
+                    </div>
+                </div>
+
+                <div class="flight-details-grid">
+                    <div class="detail-pill crowd medium">Medium Crowd</div>
+                    <div class="detail-pill confidence">Confidence Score: 82%</div>
+                    <div class="detail-pill">Carbon Footprint: 135 kg CO₂</div>
+                    <div class="detail-pill">Seats Left: 9</div>
+                </div>
+
+                <div class="flight-bottom">
+                    <div class="extra-info">
+                        <span>Baggage: 20kg</span>
+                        <span>Refund: Flexible</span>
+                        <span>Meal: Included</span>
+                    </div>
+                    <a href="booking.html" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- FLIGHT CARD 3 -->
+            <div class="flight-card modern-flight-card">
+                <div class="flight-top">
+                    <div class="airline-block">
+                        <img src="image.src" alt="Airline Logo">
+                        <div>
+                            <h3>Vistara</h3>
+                            <span>Flight No: UK-811</span>
+                        </div>
+                    </div>
+
+                    <div class="flight-tags">
+                        <span class="tag fast">Fastest</span>
+                    </div>
+                </div>
+
+                <div class="flight-main">
+                    <div class="time-block">
+                        <h2>01:10 PM</h2>
+                        <p>Chennai (MAA)</p>
+                    </div>
+
+                    <div class="journey-line">
+                        <span>2h 25m</span>
+                        <div class="line"></div>
+                        <small>Non-stop</small>
+                    </div>
+
+                    <div class="time-block">
+                        <h2>03:35 PM</h2>
+                        <p>Delhi (DEL)</p>
+                    </div>
+
+                    <div class="price-block">
+                        <h2>₹5,780</h2>
+                        <p>Economy</p>
+                    </div>
+                </div>
+
+                <div class="flight-details-grid">
+                    <div class="detail-pill crowd high">High Crowd</div>
+                    <div class="detail-pill confidence">Confidence Score: 74%</div>
+                    <div class="detail-pill">Carbon Footprint: 122 kg CO₂</div>
+                    <div class="detail-pill">Seats Left: 4</div>
+                </div>
+
+                <div class="flight-bottom">
+                    <div class="extra-info">
+                        <span>Baggage: 15kg</span>
+                        <span>Refund: Non-refundable</span>
+                        <span>Meal: Paid</span>
+                    </div>
+                    <a href="booking.html" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+            <!-- FLIGHT CARD 4 -->
+            <div class="flight-card modern-flight-card">
+                <div class="flight-top">
+                    <div class="airline-block">
+                        <img src="image.src" alt="Airline Logo">
+                        <div>
+                            <h3>Akasa Air</h3>
+                            <span>Flight No: QP-154</span>
+                        </div>
+                    </div>
+
+                    <div class="flight-tags">
+                        <span class="tag budget">Budget Saver</span>
+                    </div>
+                </div>
+
+                <div class="flight-main">
+                    <div class="time-block">
+                        <h2>06:40 PM</h2>
+                        <p>Chennai (MAA)</p>
+                    </div>
+
+                    <div class="journey-line">
+                        <span>2h 55m</span>
+                        <div class="line"></div>
+                        <small>Non-stop</small>
+                    </div>
+
+                    <div class="time-block">
+                        <h2>09:35 PM</h2>
+                        <p>Delhi (DEL)</p>
+                    </div>
+
+                    <div class="price-block">
+                        <h2>₹5,120</h2>
+                        <p>Economy</p>
+                    </div>
+                </div>
+
+                <div class="flight-details-grid">
+                    <div class="detail-pill crowd low">Low Crowd</div>
+                    <div class="detail-pill confidence">Confidence Score: 88%</div>
+                    <div class="detail-pill">Carbon Footprint: 116 kg CO₂</div>
+                    <div class="detail-pill">Seats Left: 16</div>
+                </div>
+
+                <div class="flight-bottom">
+                    <div class="extra-info">
+                        <span>Baggage: 15kg</span>
+                        <span>Refund: Partial</span>
+                        <span>Meal: Paid</span>
+                    </div>
+                    <a href="booking.html" class="book-btn">Book Now</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>Fly-Ease | Flight Booking System</p>
+        <p>Smart booking with confidence, crowd awareness, and eco insights.</p>
+        <p>B.Tech Academic Project</p>
+    </footer>
+
+</body>
+</html>
