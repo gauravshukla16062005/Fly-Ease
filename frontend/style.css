@@ -1981,3 +1981,347 @@ footer {
         align-items: flex-start;
     }
 }
+
+
+
+
+/* ADMIN DASHBOARD PAGE */
+.admin-hero {
+    background: linear-gradient(135deg, #101c34, #173e7a, #0b5ed7);
+    color: white;
+    padding: 48px 34px 34px;
+}
+
+.admin-hero-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.admin-label {
+    font-size: 15px;
+    opacity: 0.9;
+    margin-bottom: 8px;
+}
+
+.admin-hero h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.admin-subtext {
+    max-width: 760px;
+    font-size: 17px;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+.admin-hero-badge span {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    padding: 12px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    backdrop-filter: blur(10px);
+}
+
+.admin-overview {
+    max-width: 1280px;
+    margin: -18px auto 0;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    position: relative;
+    z-index: 2;
+}
+
+.admin-stat-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(7, 34, 86, 0.10);
+    border: 1px solid #e6eefb;
+}
+
+.admin-stat-card h3 {
+    color: #0b5ed7;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.admin-stat-card p {
+    color: #607089;
+    font-size: 14px;
+}
+
+.admin-main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 28px 24px 50px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+    background: linear-gradient(to bottom, #eef4ff, #ffffff);
+}
+
+.admin-left-column,
+.admin-right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.admin-panel {
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 24px;
+    border: 1px solid #e6eefb;
+    box-shadow: 0 14px 35px rgba(7, 34, 86, 0.08);
+}
+
+.admin-panel h2 {
+    color: #0b5ed7;
+    font-size: 25px;
+}
+
+.admin-table-wrapper {
+    overflow-x: auto;
+    margin-top: 12px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+}
+
+.admin-table thead {
+    background: #f4f8ff;
+}
+
+.admin-table th,
+.admin-table td {
+    text-align: left;
+    padding: 14px 16px;
+    border-bottom: 1px solid #e8eef8;
+    font-size: 14px;
+}
+
+.admin-table th {
+    color: #16304f;
+    font-weight: 700;
+}
+
+.admin-table td {
+    color: #5f7088;
+}
+
+.table-status {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.table-status.active {
+    background: #e7f8ee;
+    color: #1f8a4c;
+}
+
+.table-status.warning {
+    background: #fff5e8;
+    color: #b77808;
+}
+
+.table-status.danger {
+    background: #ffebee;
+    color: #c0394d;
+}
+
+.admin-booking-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.admin-booking-item {
+    background: #f8fbff;
+    border: 1px solid #e3ebfa;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.admin-booking-item h4 {
+    color: #16304f;
+    margin-bottom: 4px;
+}
+
+.admin-booking-item p {
+    color: #67778f;
+    font-size: 14px;
+}
+
+.booking-tag {
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.booking-tag.confirmed {
+    background: #e7f8ee;
+    color: #1f8a4c;
+}
+
+.booking-tag.waitlist {
+    background: #fff5e8;
+    color: #b77808;
+}
+
+.alert-card {
+    border-radius: 16px;
+    padding: 16px;
+    margin-top: 14px;
+    border: 1px solid;
+}
+
+.alert-card h4 {
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.alert-card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.danger-alert {
+    background: #fff1f3;
+    border-color: #f2c8d1;
+    color: #b9334b;
+}
+
+.warning-alert {
+    background: #fff8ec;
+    border-color: #f4e0bb;
+    color: #a86b00;
+}
+
+.info-alert {
+    background: #eef5ff;
+    border-color: #d4e3ff;
+    color: #0b5ed7;
+}
+
+.admin-quick-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.admin-action-btn {
+    text-decoration: none;
+    background: linear-gradient(135deg, #0b5ed7, #2c87ff);
+    color: white;
+    padding: 13px 16px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 8px 18px rgba(11, 94, 215, 0.18);
+}
+
+.analytics-box {
+    background: #f7faff;
+    border: 1px solid #e2ebfa;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 14px;
+}
+
+.analytics-box:last-child {
+    margin-bottom: 0;
+}
+
+.analytics-box h4 {
+    color: #0b5ed7;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.analytics-box p {
+    color: #61718a;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.system-summary-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e7eef9;
+    color: #61718a;
+    font-size: 14px;
+}
+
+.system-summary-line:last-child {
+    border-bottom: none;
+}
+
+.system-summary-line strong {
+    color: #162741;
+    text-align: right;
+}
+
+/* RESPONSIVE ADMIN DASHBOARD */
+@media (max-width: 1100px) {
+    .admin-overview {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .admin-main {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .admin-hero {
+        padding: 34px 18px 26px;
+    }
+
+    .admin-hero h1 {
+        font-size: 30px;
+    }
+
+    .admin-overview {
+        grid-template-columns: 1fr;
+        padding: 0 16px;
+    }
+
+    .admin-main {
+        padding: 20px 16px 35px;
+    }
+
+    .admin-panel {
+        padding: 18px;
+    }
+
+    .system-summary-line,
+    .admin-booking-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
