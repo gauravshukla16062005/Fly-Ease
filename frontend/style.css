@@ -243,7 +243,6 @@ footer {
     object-fit: cover;
     border-radius: 10px;
 }
-<<<<<<< HEAD
 /* REGISTER / LOGIN FORM BOX */
 .auth-container{
     width:420px;
@@ -602,7 +601,6 @@ footer {
                         margin-bottom:15px;
                         
                         }
-=======
 
 
 /* FLIGHT RESULTS PAGE */
@@ -2685,4 +2683,3 @@ footer {
         align-items: flex-start;
     }
 }
->>>>>>> b50dc87b7d8203aff6ada173cf1c72a931b57373

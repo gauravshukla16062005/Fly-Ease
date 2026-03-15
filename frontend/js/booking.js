@@ -1,14 +1,13 @@
-<<<<<<< HEAD
+
 const flightId = localStorage.getItem("flightId")
 
 document.getElementById("flightInfo").innerHTML =
 "Booking Flight ID: " + flightId
 
-function confirmBooking(){
+function confirmBooking(){}
 
 alert("Flight Booked Successfully ✈️")
 
-=======
 document.addEventListener("DOMContentLoaded", () => {
     loadSelectedFlight();
     setupBookingForm();
@@ -104,5 +103,4 @@ function setupBookingForm() {
 function validateEmail(email) {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
->>>>>>> b50dc87b7d8203aff6ada173cf1c72a931b57373
 }

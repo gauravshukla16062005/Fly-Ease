@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const resultsContainer = document.getElementById("results")
 
 flights.forEach(flight => {
@@ -23,12 +23,11 @@ resultsContainer.appendChild(card)
 
 })
 
-function bookFlight(id){
+function bookFlight(id){}
 
 localStorage.setItem("flightId",id)
 window.location.href="booking.html"
 
-=======
 document.addEventListener("DOMContentLoaded", () => {
     setupSearchForm();
     setMinimumDate();
@@ -85,5 +84,4 @@ function saveSearchHistory(searchData) {
     const existingHistory = JSON.parse(localStorage.getItem("flyEaseSearchHistory")) || [];
     existingHistory.push(searchData);
     localStorage.setItem("flyEaseSearchHistory", JSON.stringify(existingHistory));
->>>>>>> b50dc87b7d8203aff6ada173cf1c72a931b57373
 }
