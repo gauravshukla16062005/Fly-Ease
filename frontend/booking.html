@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html>
 <head>
 <title>Book Flight | Fly-Ease</title>
@@ -78,6 +79,241 @@ window.location="home.html"
 }
 
 </script>
+=======
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation | Fly-Ease</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="logoflyease.png" alt="Fly-Ease Logo">
+            <h2>Fly-Ease</h2>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="searchFlights.html">Search Flights</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="booking-hero">
+        <div class="booking-hero-content">
+            <div>
+                <h1>Complete Your Booking</h1>
+                <p>Review your selected flight, fill in passenger details, and confirm your reservation with confidence.</p>
+            </div>
+            <div class="booking-status-badge">
+                <span>Secure Booking Flow</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN BOOKING SECTION -->
+    <section class="booking-page">
+
+        <!-- LEFT SIDE -->
+        <div class="booking-left">
+
+            <!-- SELECTED FLIGHT SUMMARY -->
+            <div class="booking-card flight-summary-card">
+                <div class="card-header-row">
+                    <h2>Selected Flight</h2>
+                    <span class="mini-badge">Recommended Choice</span>
+                </div>
+
+                <div class="selected-flight-main">
+                    <div class="selected-airline">
+                        <img src="image.src" alt="Airline Logo">
+                        <div>
+                            <h3>Indigo Airlines</h3>
+                            <p>Flight No: 6E-214 | Economy</p>
+                        </div>
+                    </div>
+
+                    <div class="selected-route">
+                        <div class="route-block">
+                            <h3>06:15 AM</h3>
+                            <p>Chennai (MAA)</p>
+                        </div>
+
+                        <div class="route-line-block">
+                            <span>2h 40m</span>
+                            <div class="route-line"></div>
+                            <small>Non-stop</small>
+                        </div>
+
+                        <div class="route-block">
+                            <h3>08:55 AM</h3>
+                            <p>Delhi (DEL)</p>
+                        </div>
+                    </div>
+
+                    <div class="flight-meta-grid">
+                        <div class="meta-pill">Low Crowd</div>
+                        <div class="meta-pill">Confidence Score: 91%</div>
+                        <div class="meta-pill">Carbon Footprint: 118 kg CO₂</div>
+                        <div class="meta-pill">Seats Left: 18</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PASSENGER DETAILS -->
+            <div class="booking-card passenger-card">
+                <h2>Passenger Details</h2>
+
+                <form class="booking-form" action="userDashboard.html" method="GET">
+                    <div class="booking-form-row">
+                        <div class="booking-form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Enter passenger name" required>
+                        </div>
+
+                        <div class="booking-form-group">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" name="age" placeholder="Enter age" min="1" required>
+                        </div>
+                    </div>
+
+                    <div class="booking-form-row">
+                        <div class="booking-form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="Enter email address" required>
+                        </div>
+
+                        <div class="booking-form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter phone number" required>
+                        </div>
+                    </div>
+
+                    <div class="booking-form-row">
+                        <div class="booking-form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" required>
+                                <option value="">Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="booking-form-group">
+                            <label for="seatPref">Seat Preference</label>
+                            <select id="seatPref" name="seatPref" required>
+                                <option value="">Select seat preference</option>
+                                <option>Window</option>
+                                <option>Aisle</option>
+                                <option>Middle</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="booking-form-row">
+                        <div class="booking-form-group full-width">
+                            <label for="specialRequest">Special Requests</label>
+                            <textarea id="specialRequest" name="specialRequest" rows="4" placeholder="Enter meal preference, wheelchair support, or any request"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="booking-checkboxes">
+                        <label><input type="checkbox" required> I confirm that the passenger details entered are correct.</label>
+                        <label><input type="checkbox" required> I agree to the terms, cancellation, and refund policy.</label>
+                    </div>
+
+                    <div class="booking-action-row">
+                        <a href="flightResults.html" class="secondary-btn">Back to Results</a>
+                        <button type="submit" class="confirm-booking-btn">Confirm Booking</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <aside class="booking-right">
+
+            <!-- FARE SUMMARY -->
+            <div class="booking-card fare-card">
+                <h2>Fare Summary</h2>
+
+                <div class="fare-line">
+                    <span>Base Fare</span>
+                    <strong>₹4,499</strong>
+                </div>
+
+                <div class="fare-line">
+                    <span>Dynamic Fare Adjustment</span>
+                    <strong>₹250</strong>
+                </div>
+
+                <div class="fare-line">
+                    <span>Convenience Fee</span>
+                    <strong>₹100</strong>
+                </div>
+
+                <div class="fare-line">
+                    <span>Taxes & Charges</span>
+                    <strong>₹50</strong>
+                </div>
+
+                <div class="fare-total">
+                    <span>Total Amount</span>
+                    <strong>₹4,899</strong>
+                </div>
+            </div>
+
+            <!-- SMART INSIGHTS -->
+            <div class="booking-card insight-side-card">
+                <h2>Smart Booking Insights</h2>
+
+                <div class="side-insight-box">
+                    <h4>Confidence Score</h4>
+                    <p>91% — this flight has strong booking stability and a good seat margin.</p>
+                </div>
+
+                <div class="side-insight-box">
+                    <h4>Crowd Level</h4>
+                    <p>Low crowd expected, which may provide a smoother boarding experience.</p>
+                </div>
+
+                <div class="side-insight-box">
+                    <h4>Eco Insight</h4>
+                    <p>This option has comparatively lower carbon emissions than similar routes.</p>
+                </div>
+            </div>
+
+            <!-- POLICY CARD -->
+            <div class="booking-card policy-card">
+                <h2>Important Notes</h2>
+                <ul>
+                    <li>Check-in opens 2 hours before departure.</li>
+                    <li>Carry a valid government ID during travel.</li>
+                    <li>Partial refund available on cancellation.</li>
+                    <li>Seat allocation is subject to availability.</li>
+                </ul>
+            </div>
+
+        </aside>
+    </section>
+
+    <footer>
+        <p>Fly-Ease | Flight Booking System</p>
+        <p>Smart booking with confidence, crowd awareness, and eco insights.</p>
+        <p>B.Tech Academic Project</p>
+    </footer>
+
+    <script src="js/common.js"></script>
+<script src="js/booking.js"></script>
+
+>>>>>>> b50dc87b7d8203aff6ada173cf1c72a931b57373
 
 </body>
 </html>

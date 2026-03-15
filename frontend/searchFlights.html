@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<<<<<<< HEAD
 <meta charset="UTF-8">
 <title>Search Flights | Fly-Ease</title>
 <link rel="stylesheet" href="style.css">
@@ -54,5 +55,85 @@ window.location=
 
 </script>
 
+=======
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Flights | Fly-Ease</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logoflyease.png" alt="Fly-Ease Logo">
+            <h2>Fly-Ease</h2>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+            <a href="searchFlights.html">Search Flights</a>
+        </nav>
+    </header>
+
+    <section class="search-page">
+        <div class="search-container">
+            <h1>Search Flights</h1>
+            <p>Find the best flight based on your travel needs and preferences.</p>
+
+            <form action="flightResults.html" method="GET" class="search-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="source">From</label>
+                        <input type="text" id="source" name="source" placeholder="Enter departure city" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination">To</label>
+                        <input type="text" id="destination" name="destination" placeholder="Enter destination city" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="travelDate">Travel Date</label>
+                        <input type="date" id="travelDate" name="travelDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="preference">Travel Preference</label>
+                        <select id="preference" name="preference" required>
+                            <option value="">Select preference</option>
+                            <option value="cheapest">Cheapest</option>
+                            <option value="fastest">Fastest</option>
+                            <option value="eco-friendly">Eco-Friendly</option>
+                            <option value="comfortable">Comfortable</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row single">
+                    <div class="form-group">
+                        <label for="passengers">Passengers</label>
+                        <input type="number" id="passengers" name="passengers" min="1" max="10" value="1" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Search Flights</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Fly-Ease | Flight Booking System</p>
+        <p>Tech Stack: Frontend | Java | MySQL</p>
+        <p>B.Tech Academic Project</p>
+    </footer>
+
+    <script src="js/common.js"></script>
+<script src="js/searchFlights.js"></script>
+
+
+>>>>>>> b50dc87b7d8203aff6ada173cf1c72a931b57373
 </body>
 </html>

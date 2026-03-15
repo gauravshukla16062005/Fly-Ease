@@ -1,100 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Fly-Ease | Admin Dashboard</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Fly-Ease</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-<div class="logo">
-<img src="logoflyease.png" alt="Fly-Ease Logo">
-<span class="tagline">Fly Smart · Fly Confident</span>
-</div>
-<h1>Fly-Ease Admin Panel</h1>
-<nav>
-<a href="home.html">Home</a>
-<a href="searchFlights.html">Flights</a>
-<a href="login.html">Login</a>
-</nav>
-</header>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="logoflyease.png" alt="Fly-Ease Logo">
+            <h2>Fly-Ease</h2>
+        </div>
+        <nav>
+            <a href="home.html">Home</a>
+            <a href="searchFlights.html">Flights</a>
+            <a href="adminDashboard.html">Admin Panel</a>
+            <a href="login.html">Logout</a>
+        </nav>
+    </header>
 
-<div class="dashboard-container">
-    <div class="admin-card">
-        <h2>Admin Login</h2>
-
-        <form onsubmit="return validateAdmin()">
-
-            <div class="input-box">
-                <label>User ID</label>
-                <input type="text" id="userid" placeholder="Enter Admin ID">
+    <!-- HERO -->
+    <section class="admin-hero">
+        <div class="admin-hero-content">
+            <div>
+                <p class="admin-label">Admin Control Center</p>
+                <h1>Manage Fly-Ease Operations</h1>
+                <p class="admin-subtext">
+                    Monitor flights, manage bookings, track analytics, and review suspicious activity from one centralized dashboard.
+                </p>
             </div>
 
-            <div class="input-box">
-                <label>Full Name</label>
-                <input type="text" id="fullname" placeholder="Enter Full Name">
+            <div class="admin-hero-badge">
+                <span>System Status: Active</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="admin-overview">
+        <div class="admin-stat-card">
+            <h3>128</h3>
+            <p>Total Bookings</p>
+        </div>
+        <div class="admin-stat-card">
+            <h3>24</h3>
+            <p>Flights Managed</p>
+        </div>
+        <div class="admin-stat-card">
+            <h3>09</h3>
+            <p>Waitlisted Users</p>
+        </div>
+        <div class="admin-stat-card">
+            <h3>03</h3>
+            <p>Fraud Alerts</p>
+        </div>
+    </section>
+
+    <!-- MAIN DASHBOARD -->
+    <section class="admin-main">
+
+        <!-- LEFT SIDE -->
+        <div class="admin-left-column">
+
+            <!-- FLIGHT MANAGEMENT -->
+            <div class="admin-panel">
+                <div class="panel-header">
+                    <h2>Flight Management</h2>
+                    <a href="#">+ Add New Flight</a>
+                </div>
+
+                <div class="admin-table-wrapper">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Flight No</th>
+                                <th>Route</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Seats Left</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>6E-214</td>
+                                <td>Chennai → Delhi</td>
+                                <td>20 Mar 2026</td>
+                                <td>06:15 AM</td>
+                                <td>18</td>
+                                <td><span class="table-status active">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>AI-302</td>
+                                <td>Chennai → Delhi</td>
+                                <td>28 Mar 2026</td>
+                                <td>09:30 AM</td>
+                                <td>09</td>
+                                <td><span class="table-status active">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>UK-811</td>
+                                <td>Chennai → Mumbai</td>
+                                <td>30 Mar 2026</td>
+                                <td>01:10 PM</td>
+                                <td>04</td>
+                                <td><span class="table-status warning">Almost Full</span></td>
+                            </tr>
+                            <tr>
+                                <td>QP-154</td>
+                                <td>Delhi → Bengaluru</td>
+                                <td>02 Apr 2026</td>
+                                <td>06:40 PM</td>
+                                <td>00</td>
+                                <td><span class="table-status danger">Full</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
-            <div class="input-box">
-                <label>Password</label>
-                <input type="password" id="password" placeholder="Enter Password">
+            <!-- RECENT BOOKINGS -->
+            <div class="admin-panel">
+                <div class="panel-header">
+                    <h2>Recent Bookings</h2>
+                </div>
+
+                <div class="admin-booking-list">
+                    <div class="admin-booking-item">
+                        <div>
+                            <h4>Abhishek Shukla</h4>
+                            <p>Booked Indigo Airlines • Chennai to Delhi • Seat 12A</p>
+                        </div>
+                        <span class="booking-tag confirmed">Confirmed</span>
+                    </div>
+
+                    <div class="admin-booking-item">
+                        <div>
+                            <h4>Rahul Verma</h4>
+                            <p>Booked Air India • Chennai to Delhi • Waitlist Position 03</p>
+                        </div>
+                        <span class="booking-tag waitlist">Waitlisted</span>
+                    </div>
+
+                    <div class="admin-booking-item">
+                        <div>
+                            <h4>Priya Sharma</h4>
+                            <p>Booked Vistara • Chennai to Mumbai • Seat 09F</p>
+                        </div>
+                        <span class="booking-tag confirmed">Confirmed</span>
+                    </div>
+                </div>
             </div>
 
-            <div id="message"></div>
+            <!-- FRAUD ALERTS -->
+            <div class="admin-panel">
+                <div class="panel-header">
+                    <h2>Fraud Detection Alerts</h2>
+                </div>
 
-            <button type="submit" class="login-btn">Login</button>
+                <div class="alert-card danger-alert">
+                    <h4>Multiple Booking Attempts Detected</h4>
+                    <p>User ID: U102 attempted 5 bookings within 2 minutes on the same route.</p>
+                </div>
 
-        </form>
-    </div>
-</div>
+                <div class="alert-card warning-alert">
+                    <h4>Repeated Cancellation Pattern</h4>
+                    <p>User ID: U118 cancelled 4 bookings in 3 days. Review recommended.</p>
+                </div>
 
-<script>
-function validateAdmin() {
+                <div class="alert-card info-alert">
+                    <h4>High Booking Frequency</h4>
+                    <p>A spike in bookings was detected for Chennai → Delhi on 20 Mar 2026.</p>
+                </div>
+            </div>
 
-let userId = document.getElementById("userid").value.trim();
-let fullName = document.getElementById("fullname").value.trim();
-let password = document.getElementById("password").value.trim();
-let message = document.getElementById("message");
+        </div>
 
-message.innerHTML = "";
+        <!-- RIGHT SIDE -->
+        <aside class="admin-right-column">
 
-if (userId === "") {
-message.innerHTML = "<div class='error'>User ID is required.</div>";
-return false;
-}
-if (userId.length < 4) {
-message.innerHTML = "<div class='error'>User ID must be at least 4 characters.</div>";
-return false;
-}
+            <!-- QUICK ACTIONS -->
+            <div class="admin-panel">
+                <h2>Quick Actions</h2>
+                <div class="admin-quick-actions">
+                    <a href="#" class="admin-action-btn">Add Flight</a>
+                    <a href="#" class="admin-action-btn">Update Schedule</a>
+                    <a href="#" class="admin-action-btn">Manage Waitlist</a>
+                    <a href="#" class="admin-action-btn">Export Report</a>
+                </div>
+            </div>
 
-if (fullName === "") {
-message.innerHTML = "<div class='error'>Full Name is required.</div>";
-return false;
-}
-if (!/^[A-Za-z ]+$/.test(fullName)) {
-message.innerHTML = "<div class='error'>Full Name must contain only letters.</div>";
-return false;
-}
+            <!-- ANALYTICS -->
+            <div class="admin-panel">
+                <h2>Analytics Overview</h2>
 
-if (password === "") {
-message.innerHTML = "<div class='error'>Password is required.</div>";
-return false;
-}
-if (password.length < 6) {
-message.innerHTML = "<div class='error'>Password must be at least 6 characters.</div>";
-return false;
-}
-if (!/(?=.*[A-Za-z])(?=.*\d)/.test(password)) {
-message.innerHTML = "<div class='error'>Password must contain at least 1 letter and 1 number.</div>";
-return false;
-}
+                <div class="analytics-box">
+                    <h4>Most Booked Route</h4>
+                    <p>Chennai → Delhi</p>
+                </div>
 
-message.innerHTML = "<div class='success'>Validation Successful!</div>";
-return false;
-}
-</script>
+                <div class="analytics-box">
+                    <h4>Peak Booking Time</h4>
+                    <p>06:00 PM – 09:00 PM</p>
+                </div>
+
+                <div class="analytics-box">
+                    <h4>Average Confidence Score</h4>
+                    <p>84%</p>
+                </div>
+
+                <div class="analytics-box">
+                    <h4>Low Crowd Flights</h4>
+                    <p>08 flights available today</p>
+                </div>
+            </div>
+
+            <!-- SYSTEM SUMMARY -->
+            <div class="admin-panel">
+                <h2>System Summary</h2>
+
+                <div class="system-summary-line">
+                    <span>Database Status</span>
+                    <strong>Connected</strong>
+                </div>
+                <div class="system-summary-line">
+                    <span>Server Health</span>
+                    <strong>Stable</strong>
+                </div>
+                <div class="system-summary-line">
+                    <span>Last Update</span>
+                    <strong>Today, 10:45 AM</strong>
+                </div>
+                <div class="system-summary-line">
+                    <span>Pending Reviews</span>
+                    <strong>03 Alerts</strong>
+                </div>
+            </div>
+
+        </aside>
+    </section>
+
+    <footer>
+        <p>Fly-Ease | Flight Booking System</p>
+        <p>Admin dashboard for flight, booking, analytics, and fraud monitoring.</p>
+        <p>B.Tech Academic Project</p>
+    </footer>
+
+    <script src="js/common.js"></script>
+<script src="js/adminDashboard.js"></script>
+</body>
 
 </body>
 </html>
