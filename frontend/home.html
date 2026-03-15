@@ -15,6 +15,8 @@
     </div>
 
     <nav>
+        <h3 id="welcomeUser"></h3>
+        <span id="username"></span>
         <a href="home.html" title="Home">Home
             
         </a>
@@ -74,7 +76,7 @@
                 <option>VIP</option>
             </select>
 
-            <button type="submit">Search Flights</button>
+            <button onclick="searchFlights()">Search Flights</button>
         </form>
     </div>
 
@@ -92,6 +94,48 @@
             <a href="login.html" class="btn secondary">Login</a>
         </div>
     </section>
+
+    <h2 class="section-title">Popular Destinations</h2>
+
+<div class="cards">
+
+    <div class="card" onclick="openFlights('Goa')">
+        <img src="card1.jpg">
+        <h3>Goa</h3>
+        <p>Starting ₹2999</p>
+        </div>
+        
+        <div class="card" onclick="openFlights('Delhi')">
+        <img src="card2.jpg">
+        <h3>Delhi</h3>
+        <p>Starting ₹3499</p>
+        </div>
+        
+        <div class="card" onclick="openFlights('Mumbai')">
+        <img src="card3.jpg">
+        <h3>Mumbai</h3>
+        <p>Starting ₹3299</p>
+        </div>
+        
+        <div class="card" onclick="openFlights('Bangalore')">
+        <img src="card4.jpg">
+        <h3>Bangalore</h3>
+        <p>Flat 20% Off</p>
+        </div>
+        
+        <div class="card" onclick="openFlights('Kolkata')">
+        <img src="card5.jpg">
+        <h3>Kolkata</h3>
+        <p>Limited Offer</p>
+        </div>
+        
+        <div class="card" onclick="openFlights('Hyderabad')">
+        <img src="card6.jpg">
+        <h3>Hyderabad</h3>
+        <p>Student Discount</p>
+        </div>
+
+</div>
 
     <!-- FEATURES SECTION -->
     <section class="features">
@@ -160,5 +204,42 @@
     </div>
 </footer>
 
+<script>
+
+    let user=localStorage.getItem("user")
+    
+    if(user){
+    document.getElementById("username").innerHTML="Welcome "+user
+    }
+    function searchFlights(){
+
+window.location.href="flightResults.html"
+
+}
+
+    
+    </script>
+    <script>
+
+        function openFlights(city){
+        
+        localStorage.setItem("destination", city)
+        
+        window.location.href="flightResults.html"
+        
+        }
+        
+        </script>
+<script>
+
+    let userName=localStorage.getItem("userName")
+    
+    if(userName){
+    
+    document.getElementById("welcomeUser").innerText="Welcome "+userName
+    
+    }
+    
+    </script>
 </body>
 </html>

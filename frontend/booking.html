@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Flight | Fly-Ease</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2 id="flightInfo"></h2>
+
+<button onclick="confirmBooking()">
+Confirm Booking
+</button>
+
+<script src="js/booking.js"></script>
+
+<header>
+<h2>Passenger Details</h2>
+</header>
+
+<div class="booking-container">
+
+<form onsubmit="confirmBooking(event)">
+
+<label>Passenger Name</label>
+<input id="name" required>
+
+<label>Email</label>
+<input id="email" required>
+
+<label>Phone</label>
+<input id="phone" required>
+
+<label>Passport Number</label>
+<input id="passport">
+
+<button type="submit">Confirm Booking</button>
+
+</form>
+
+</div>
+
+
+<script>
+
+let params=new URLSearchParams(window.location.search)
+let flightId=params.get("flight")
+
+async function confirmBooking(e){
+
+e.preventDefault()
+
+let name=document.getElementById("name").value
+let email=document.getElementById("email").value
+let phone=document.getElementById("phone").value
+let passport=document.getElementById("passport").value
+
+await fetch("http://localhost:3000/book",{
+
+method:"POST",
+
+headers:{"Content-Type":"application/json"},
+
+body:JSON.stringify({
+flight_id:flightId,
+name:name,
+email:email,
+phone:phone,
+passport:passport
+})
+
+})
+
+alert("Booking Confirmed!")
+
+window.location="home.html"
+
+}
+
+</script>
+
+</body>
+</html>

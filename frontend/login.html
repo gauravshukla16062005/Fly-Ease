@@ -1,61 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Login | Fly-Ease</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Login | Fly-Ease</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <!-- HEADER / NAVBAR -->
-    <header>
-        <div class="logo">
-            <img src="logoflyease.png" alt="Fly-Ease Logo">
-            <h2>Fly-Ease</h2>
-        </div>
-        <nav>
-            <a href="home.html">Home</a>
-            <a href="register.html">Register</a>
-            <a href="searchFlights.html">Search Flights</a>
-            <a href="adminDashboard.html">Admin</a>
-        </nav>
-    </header>
+<header>
+<div class="logo">
+<img src="logoflyease.png">
+<h2>Fly-Ease</h2>
+</div>
 
-    <!-- LOGIN SECTION -->
-    <section class="login-section">
-        <div class="login-card">
-            <h2>Login to Fly-Ease</h2>
+<nav>
+<a href="home.html">Home</a>
+<a href="login.html">Login</a>
+<a href="searchFlights.html">Search Flights</a>
+<a href="adminDashboard.html">Admin</a>
+</nav>
+</header>
 
-            <form>
-                <label>Email</label>
-                <input type="email" placeholder="Enter your email" required>
 
-                <label>Password</label>
-                <input type="password" placeholder="Enter your password" required>
+<section class="register-section">
 
-                <label>Login As</label>
-                <div class="role-select">
-                    <input type="radio" name="role" id="user" checked>
-                    <label for="user">User</label>
+<div class="register-card">
 
-                    <input type="radio" name="role" id="admin">
-                    <label for="admin">Admin</label>
-                </div>
+<h2>Login to Fly-Ease</h2>
 
-                <button type="submit">Login</button>
-            </form>
+<form>
 
-            <p class="register-link">
-                Don’t have an account?
-                <a href="register.html">Register here</a>
-            </p>
-        </div>
-    </section>
+<label>Email</label>
+<input id="email" type="email" placeholder="Enter your email" required>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>Fly-Ease | Flight Booking System</p>
-    </footer>
+<label>Password</label>
+<input id="password" type="password" placeholder="Enter your password" required>
 
+<button type="button" onclick="login()">Login</button>
+
+</form>
+
+<p class="login-link">
+Don't have an account?
+<a href="register.html">Register here</a>
+</p>
+
+</div>
+
+</section>
+
+
+<footer>
+<p>Fly-Ease | Flight Booking System</p>
+<p>Tech Stack: Frontend | Java | MySQL</p>
+</footer>
+
+
+<script>
+
+async function login(){
+
+let email=document.getElementById("email").value
+let password=document.getElementById("password").value
+
+let res=await fetch("http://localhost:3000/login",{
+method:"POST",
+headers:{"Content-Type":"application/json"},
+body:JSON.stringify({email,password})
+})
+
+let data=await res.json()
+
+if(data.success){
+
+localStorage.setItem("user",email)
+
+alert("Login Successful!")
+
+window.location="home.html"
+
+}else{
+
+alert("Invalid email or password")
+
+}
+
+}
+
+    async function login(){
+    
+    let email=document.getElementById("email").value
+    let password=document.getElementById("password").value
+    
+    try{
+    
+    let response=await fetch("http://localhost:3000/login",{
+    
+    method:"POST",
+    
+    headers:{
+    "Content-Type":"application/json"
+    },
+    
+    body:JSON.stringify({
+    email:email,
+    password:password
+    })
+    
+    })
+    
+    let data=await response.json()
+    
+    if(data.success){
+    
+    localStorage.setItem("userName",data.user.name)
+    localStorage.setItem("userEmail",data.user.email)
+    
+    alert("Login Successful")
+    
+    window.location="home.html"
+    
+    }
+    
+    else{
+    
+    alert("Invalid Email or Password")
+    
+    }
+    
+    }
+    
+    catch(error){
+    
+    console.log(error)
+    alert("Server Error")
+    
+    }
+    
+    }
+    
+    </script>
 </body>
 </html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Flight Results</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+        <div id="results"></div>
+        
+        <script src="js/flightsData.js"></script>
+        <script src="js/flightResults.js"></script>
+        
+
+<header>
+<h2>Available Flights</h2>
+</header>
+
+<div class="tabs">
+<button onclick="sortFlights('price')">Cheapest</button>
+<button onclick="sortFlights('duration')">Fastest</button>
+<button onclick="sortFlights('carbon')">Low Carbon</button>
+</div>
+
+<div class="results-container">
+
+<div class="filters">
+
+<h3>Filters</h3>
+
+<label><input type="checkbox"> Indigo</label>
+<label><input type="checkbox"> Vistara</label>
+<label><input type="checkbox"> Air India</label>
+<label><input type="checkbox"> SpiceJet</label>
+
+</div>
+
+<div class="flights" id="flights"></div>
+
+</div>
+
+<script>
+
+let flightsData=[]
+
+// read URL parameters
+let params=new URLSearchParams(window.location.search)
+
+let source=params.get("source")
+let destination=params.get("destination")
+let date=params.get("date")
+
+// fetch flights
+let data = [
+
+{
+id:1,
+airline:"Indigo",
+source:"Delhi",
+destination:"Mumbai",
+departure_time:"07:00",
+arrival_time:"09:00",
+duration:"2h",
+carbon:120,
+price:4500,
+discount:10,
+crowd:"Low",
+confidence:92
+},
+
+{
+id:2,
+airline:"Vistara",
+source:"Delhi",
+destination:"Mumbai",
+departure_time:"08:30",
+arrival_time:"10:30",
+duration:"2h",
+carbon:110,
+price:5200,
+discount:15,
+crowd:"Medium",
+confidence:89
+},
+
+{
+id:3,
+airline:"Air India",
+source:"Delhi",
+destination:"Mumbai",
+departure_time:"09:10",
+arrival_time:"11:20",
+duration:"2h 10m",
+carbon:140,
+price:4800,
+discount:20,
+crowd:"High",
+confidence:75
+},
+
+{
+id:4,
+airline:"SpiceJet",
+source:"Delhi",
+destination:"Mumbai",
+departure_time:"06:30",
+arrival_time:"08:50",
+duration:"2h 20m",
+carbon:130,
+price:4300,
+discount:5,
+crowd:"Low",
+confidence:80
+}
+
+]
+
+flightsData=data
+showFlights(data)
+
+
+// render flights
+function showFlights(data){
+
+let html=""
+
+data.forEach(f=>{
+
+let finalPrice=f.price-(f.price*f.discount/100)
+
+let carbonColor="green"
+
+if(f.carbon>140) carbonColor="red"
+else if(f.carbon>120) carbonColor="orange"
+
+html+=`
+
+<div class="flight-card">
+
+<div class="airline">
+<h3>${f.airline}</h3>
+</div>
+
+<div class="time">
+<h2>${f.departure_time}</h2>
+<p>${f.source}</p>
+</div>
+
+<div class="duration">
+<p>${f.duration}</p>
+</div>
+
+<div class="time">
+<h2>${f.arrival_time}</h2>
+<p>${f.destination}</p>
+</div>
+
+<div class="carbon" style="color:${carbonColor}">
+🌍 Carbon: ${f.carbon} kg
+</div>
+
+<div class="crowd">
+👥 Crowd: ${f.crowd}
+</div>
+
+<div class="confidence">
+⭐ Confidence: ${f.confidence}%
+</div>
+
+<div class="price">
+
+<p style="text-decoration:line-through">
+₹${f.price}
+</p>
+
+<h2>₹${finalPrice}</h2>
+
+</div>
+
+<button class="book-btn" onclick="bookFlight(${f.id})">
+Select Flight
+</button>
+
+</div>
+
+`
+
+})
+
+document.getElementById("flights").innerHTML=html
+
+}
+
+
+// sorting
+function sortFlights(type){
+
+if(type=="price"){
+flightsData.sort((a,b)=>a.price-b.price)
+}
+
+if(type=="duration"){
+flightsData.sort((a,b)=>a.duration.localeCompare(b.duration))
+}
+
+if(type=="carbon"){
+flightsData.sort((a,b)=>a.carbon-b.carbon)
+}
+
+showFlights(flightsData)
+
+}
+
+
+// booking redirect
+function bookFlight(id){
+
+window.location="booking.html?flight="+id
+
+}
+
+</script>
+
+</body>
+</html>

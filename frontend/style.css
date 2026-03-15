@@ -8,13 +8,13 @@
 
 /* BODY */
 body {
-    background-color: #c61034e3;
+    background-color: #f5eeef;
     color: #333;
 }
 
 /* HEADER / NAVBAR */
 header {
-    background-color: #e15f0e;
+    background-color: #230452;
     color: rgba(255, 255, 255, 0.964);
     padding: 15px 40px;
     display: flex;
@@ -243,3 +243,361 @@ footer {
     object-fit: cover;
     border-radius: 10px;
 }
+/* REGISTER / LOGIN FORM BOX */
+.auth-container{
+    width:420px;
+    margin:60px auto;
+    background:white;
+    padding:35px;
+    border-radius:10px;
+    box-shadow:0 6px 20px rgba(0,0,0,0.15);
+    text-align:center;
+}
+
+.auth-container h2{
+    margin-bottom:20px;
+}
+
+.auth-container input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.auth-container button{
+    width:100%;
+    padding:12px;
+    background:#0b5ed7;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.auth-container button:hover{
+    background:#0849a5;
+}
+
+.auth-container p{
+    margin-top:15px;
+}
+/* REGISTER PAGE */
+
+.register-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+}
+
+.register-card{
+    background:white;
+    padding:35px;
+    width:420px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.register-card h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.register-card label{
+    display:block;
+    margin-top:10px;
+    font-weight:bold;
+}
+
+.register-card input{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.register-card button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    background:#0b5ed7;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.register-card button:hover{
+    background:#0849a5;
+}
+
+.login-link{
+    text-align:center;
+    margin-top:15px;
+}
+/* ADMIN DASHBOARD LOGIN */
+
+.dashboard-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+}
+
+.admin-card{
+    background:white;
+    width:420px;
+    padding:35px;
+    border-radius:10px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
+.admin-card h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.input-box{
+    margin-bottom:15px;
+}
+
+.input-box label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:5px;
+}
+
+.input-box input{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+.login-btn{
+    width:100%;
+    padding:12px;
+    background:#0b5ed7;
+    color:white;
+    border:none;
+    border-radius:6px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.login-btn:hover{
+    background:#0849a5;
+}
+
+/* Validation messages */
+
+.error{
+    color:red;
+    margin-top:10px;
+}
+
+.success{
+    color:green;
+    margin-top:10px;
+}
+.search-container{
+
+    width:400px;
+    margin:50px auto;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    
+    }
+    
+    .flight-card{
+    
+    border:1px solid #ddd;
+    padding:20px;
+    margin:15px;
+    border-radius:10px;
+    
+    }
+    .search-box{
+        width:700px;
+        margin:60px auto;
+        background:white;
+        padding:30px;
+        border-radius:10px;
+        box-shadow:0 4px 10px rgba(0,0,0,0.15);
+        }
+        
+        .search-grid{
+        display:flex;
+        gap:10px;
+        }
+        
+        .search-grid input{
+        padding:10px;
+        flex:1;
+        }
+        
+        .search-grid button{
+        background:#0b5ed7;
+        color:white;
+        border:none;
+        padding:10px 20px;
+        cursor:pointer;
+        }
+        
+        .results-container{
+        display:flex;
+        padding:40px;
+        }
+        
+        .filters{
+        width:200px;
+        background:white;
+        padding:20px;
+        border-radius:10px;
+        }
+        
+        .flights{
+        flex:1;
+        padding-left:30px;
+        }
+        
+        .flight-card{
+        background:white;
+        padding:20px;
+        margin-bottom:20px;
+        border-radius:10px;
+        box-shadow:0 3px 8px rgba(0,0,0,0.15);
+        }
+        
+        .book-btn{
+        background:#ff6b00;
+        color:white;
+        border:none;
+        padding:10px 20px;
+        cursor:pointer;
+        }
+        .booking-container{
+
+            width:400px;
+            margin:50px auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.15);
+            
+            }
+            
+            .booking-container input{
+            
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+            
+            }
+            
+            .booking-container button{
+            
+            width:100%;
+            padding:12px;
+            background:#ff6b00;
+            border:none;
+            color:white;
+            font-weight:bold;
+            cursor:pointer;
+            
+            }
+            .tabs{
+
+                display:flex;
+                gap:20px;
+                padding:20px;
+                background:white;
+                margin:20px;
+                
+                }
+                
+                .tabs button{
+                
+                padding:10px 20px;
+                border:none;
+                background:#0b5ed7;
+                color:white;
+                cursor:pointer;
+                border-radius:5px;
+                
+                }
+
+                .flight-card{
+                    background:white;
+                    padding:20px;
+                    margin:20px;
+                    border-radius:10px;
+                    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+                    }
+                    
+                    button{
+                    background:#ff6b00;
+                    color:white;
+                    border:none;
+                    padding:10px 15px;
+                    border-radius:5px;
+                    cursor:pointer;
+                    }
+
+                    .cards{
+
+                        display:flex;
+                        justify-content:center;
+                        gap:25px;
+                        flex-wrap:wrap;
+                        margin:40px;
+                        
+                        }
+                        
+                        .card{
+                        
+                        background:white;
+                        border-radius:12px;
+                        overflow:hidden;
+                        width:220px;
+                        box-shadow:0 4px 15px rgba(0,0,0,0.1);
+                        transition:0.3s;
+                        cursor:pointer;
+                        
+                        }
+                        
+                        .card:hover{
+                        
+                        transform:scale(1.05);
+                        
+                        }
+                        
+                        .card img{
+                        
+                        width:100%;
+                        height:150px;
+                        object-fit:cover;
+                        
+                        }
+                        
+                        .card h3{
+                        
+                        text-align:center;
+                        margin:10px;
+                        
+                        }
+                        
+                        .card p{
+                        
+                        text-align:center;
+                        color:#ff6b00;
+                        font-weight:bold;
+                        margin-bottom:15px;
+                        
+                        }
