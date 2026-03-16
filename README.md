@@ -8,6 +8,6 @@ Frontend: HTML, CSS, JavaScript
 Backend: Java 
 Database: MySQL
 
-#Contributors
-Jyotirgamay Maurya : https://github.com/jyotirgamay21
+#Contributors 
+Jyotirgamay Maurya : https://github.com/jyotirgamay21 
 Abhishek Shukla : https://github.com/gauravshukla16062005
